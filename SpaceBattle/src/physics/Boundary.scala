@@ -1,5 +1,5 @@
 package physics
 
-class Boundary(var start: PhysicsVector, var velocity: PhysicsVector) {
+class Boundary(var endX: Int, var endY: Int) {
 
 }
