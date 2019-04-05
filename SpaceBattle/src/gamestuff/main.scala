@@ -1,11 +1,7 @@
 package gamestuff
 
-import java.awt.Graphics
-import java.awt.event.{MouseAdapter, MouseEvent}
-import java.awt.image.BufferedImage
-import java.util
-import java.util.{Timer, TimerTask}
-import javax.swing.{JFrame, JPanel}
+
+import javax.swing.{JFrame}
 
 import scala.collection.mutable.ListBuffer
 
