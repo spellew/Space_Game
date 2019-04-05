@@ -43,22 +43,22 @@ class Player(){
   def outOfBounds = false
 
   //shot
-//  def shoot: Array[Nothing] = {
-//    val xStep = width / 2
-//    val yStep = 40
-//    if (doubleFire > 0) {
-//      val bullets = new Array[Nothing](2)
-//      bullets(0) = new Nothing(x + xStep, y - yStep)
-//      bullets(1) = new Nothing(x + 3 * xStep, y - yStep)
-//      bullets
-//    } else {
-//      val bullets = new Array[Nothing](1)
-//      bullets(0) = new Nothing(x + 2 * xStep, y - yStep)
-//      bullets
-//    }
-//  }
+  //  def shoot: Array[Nothing] = {
+  //    val xStep = width / 2
+  //    val yStep = 40
+  //    if (doubleFire > 0) {
+  //      val bullets = new Array[Nothing](2)
+  //      bullets(0) = new Nothing(x + xStep, y - yStep)
+  //      bullets(1) = new Nothing(x + 3 * xStep, y - yStep)
+  //      bullets
+  //    } else {
+  //      val bullets = new Array[Nothing](1)
+  //      bullets(0) = new Nothing(x + 2 * xStep, y - yStep)
+  //      bullets
+  //    }
+  //  }
 
-//algorithm for hit
+  //algorithm for hit
   def hit(other: PhysicsVector): Boolean = {
     val x1 = other.x - this.x / 2
     val x2 = other.x + this.x / 2 + other.x
