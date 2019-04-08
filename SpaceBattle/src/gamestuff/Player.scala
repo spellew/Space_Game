@@ -4,14 +4,13 @@ import physics.PhysicsVector
 
 class Player(){
 
-  life = 9
-  doubleFire = 0
-  var x: Int = 160
-  var y: Int = 300
-  //set  double fire , life
-  private var index = 0
-  private var doubleFire = 0
-  private var life = 0
+
+  //set  double fire , life, width, height
+  var width: Int = 160
+  var height: Int = 300
+  var index = 0
+  var doubleFire = 2
+  var life = 9
   def isDoubleFire: Int = doubleFire
 
   //set double fire value
@@ -34,9 +33,11 @@ class Player(){
   def getLife: Int = life
 
   //move position
+  var locax: Int = 0
+  var locay: Int = 0
   def moveTo(x: Int, y: Int): Unit = {
-    x = x - width / 2
-    y = y - height / 2
+    locax = x - width / 2
+    locay = y - height / 2
   }
 
   //CHECK for outOfBound
@@ -60,13 +61,13 @@ class Player(){
 
   //algorithm for hit
   def hit(other: PhysicsVector): Boolean = {
-    val x1 = other.x - this.x / 2
-    val x2 = other.x + this.x / 2 + other.x
-    val y1 = other.y - this.y / 2
-    val y2 = other.y + this.y / 2 + other.y
+    val x1 = other.x - width / 2
+    val x2 = other.x + width / 2 + other.x
+    val y1 = other.y - height / 2
+    val y2 = other.y + height / 2 + other.y
     //define the distence
-    val Playerx = x + this.x / 2
-    val Playery = y + this.y / 2
+    val Playerx = locax + width / 2
+    val Playery = locay + height/ 2
     //check the hit
     Playerx > x1 && Playerx < x2 && Playery > y1 && Playery < y2
   }
