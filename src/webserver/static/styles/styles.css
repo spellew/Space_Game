@@ -1,0 +1,18 @@
+html, body {
+  margin: 0;
+  background-color: #3a2e3f;
+  width: 100vw;
+  height: 100vh;
+}
+
+canvas {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "kenvector_future";
+	font-style: normal;
+	font-weight: 400;
+	src: url("./assets/bonus/kenvector_future.ttf");
+}
