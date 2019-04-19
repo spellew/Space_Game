@@ -7,12 +7,21 @@ window.addEventListener("load", () => {
 
     ws.onopen = function () {
       console.log("socket opened");
-      ws.send("Shamroy");
+      ws.send(JSON.stringify({
+        action: "register",
+        nickname: "Foo"
+      }));
     };
 
     ws.onmessage = function (evt) {
       console.log("socket received message");
       console.log(evt);
+      const data = JSON.parse(evt.data);
+      console.log(data);
+      switch(data.action) {
+        case "new-game":
+          console.log("start new-game");
+      }
     };
 
     ws.onerror = function (evt) {
